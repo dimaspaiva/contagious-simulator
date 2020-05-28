@@ -14,6 +14,11 @@ Just open index.html on your browser
 
 **Ball.js**
 
+- Constructor (in sequence):
+  - radius;
+  - id;
+  - can pass to show range
+  - can pass if start infected
 - x and y: ball position;
 - velocity (x, y): moving orientation and speed;
 - radius: ball visual size and infection size;
