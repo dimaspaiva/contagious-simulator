@@ -19,3 +19,5 @@ Just open index.html on your browser
 - radius: ball visual size and infection size;
 - infection math: infectionRate / 100;
 - infectionRate: % of infection;
+- color: default ball color;
+- infectionColor: when infected different color;

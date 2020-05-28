@@ -8,7 +8,7 @@ function setup() {
 
   for (let i = 0; i < amount; i++) {
     if (i === 1) {
-      balls.push(new Ball(3, i, true))
+      balls.push(new Ball(3, i, false, true))
     } else {
       balls.push(new Ball(3, i))
     }

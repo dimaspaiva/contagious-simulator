@@ -1,5 +1,5 @@
 class Ball {
-  constructor(radius, id, infection = false) {
+  constructor(radius, id, visualRange = false, infection = false) {
     this.x = Math.ceil(Math.random() * (300 - radius))
     this.y = Math.ceil(Math.random() * (300 - radius))
     this.id = id
@@ -12,21 +12,26 @@ class Ball {
     this.radius = radius
 
     this.isInfected = infection
-    this.infectionRate = 25
+    this.infectionRate = 2.5
+
+    this.showRange = visualRange
+
+    this.color = '#6699ff'
+    this.infectionColor = '#dd3366'
   }
 
   draw = () => {
     this.person()
-    // this.range(3 * this.radius)
+    this.showRange && this.range(3 * this.radius)
   }
 
   person = () => {
     noStroke()
 
     if (this.isInfected) {
-      fill(255, 120, 120)
+      fill(this.infectionColor)
     } else {
-      fill(90, 90, 200)
+      fill(this.color)
     }
     ellipse(this.x, this.y, this.radius * 2)
   }
