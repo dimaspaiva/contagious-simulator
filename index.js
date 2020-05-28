@@ -3,7 +3,10 @@ let days = 0
 
 function setup() {
   createCanvas(300, 300)
-  for (let i = 0; i < 500; i++) {
+
+  const amount = 500
+
+  for (let i = 0; i < amount; i++) {
     if (i === 1) {
       balls.push(new Ball(3, i, true))
     } else {

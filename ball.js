@@ -1,5 +1,5 @@
 class Ball {
-  constructor(radius, id, desease = false) {
+  constructor(radius, id, infection = false) {
     this.x = Math.ceil(Math.random() * (300 - radius))
     this.y = Math.ceil(Math.random() * (300 - radius))
     this.id = id
@@ -11,7 +11,8 @@ class Ball {
 
     this.radius = radius
 
-    this.isInfected = desease
+    this.isInfected = infection
+    this.infectionRate = 25
   }
 
   draw = () => {
@@ -82,7 +83,8 @@ class Ball {
             person.y < this.y + this.radius * 2 &&
             person.y > this.y - this.radius * 2
           ) {
-            person.isInfected = Math.ceil(Math.random() * 1000) < 25
+            person.isInfected =
+              Math.ceil(Math.random() * 100) < this.infectionRate
           }
         }
       }
